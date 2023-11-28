@@ -1,48 +1,49 @@
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Replace with your Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyAmUhBfF6x8YxljEcpruBxx1bMKVn8FkSU",
-  authDomain: "edicodes.firebaseapp.com",
-  projectId: "edicodes",
-  storageBucket: "edicodes.appspot.com",
-  messagingSenderId: "643619931425",
-  appId: "1:643619931425:web:b2a5eacd46f40f5680aa60",
-  measurementId: "G-62Q03G63BG"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Reference to the authentication service
+// Reference to authentication service
 const auth = firebase.auth();
 
-function signIn() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+// Login form
+const loginForm = document.getElementById('login');
+loginForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById('login-email').value;
+  const password = document.getElementById('login-password').value;
 
   auth.signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      console.log(user);
-      window.location.href = 'en.html';
-    })
-    .catch((error) => {
-      console.error(error.message);
-    });
-}
+      .then(() => {
+          console.log('Login successful');
+      })
+      .catch(error => {
+          console.error(error.message);
+      });
+});
 
-function signUp() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+// Signup form
+const signupForm = document.getElementById('signup');
+signupForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById('signup-email').value;
+  const password = document.getElementById('signup-password').value;
 
   auth.createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed up
-      const user = userCredential.user;
-      console.log(user);
-    })
-    .catch((error) => {
-      console.error(error.message);
-    });
-}
+      .then(() => {
+          console.log('Signup successful');
+      })
+      .catch(error => {
+          console.error(error.message);
+      });
+});
