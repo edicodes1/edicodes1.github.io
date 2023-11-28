@@ -25,6 +25,7 @@ function signIn() {
       // Signed in
       const user = userCredential.user;
       console.log(user);
+      window.location.href = 'en.html';
     })
     .catch((error) => {
       console.error(error.message);
