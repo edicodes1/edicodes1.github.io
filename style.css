@@ -1,32 +1,93 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  font-family: type;
+  background-color:black;
+  overflow: hidden;
+  text-align: right;
 }
 
-.container {
-    display: flex;
+h2 {
+  text-align: center;
+  transition: transform 2s ease-in-out, text-shadow 1s ease-in-out;
+  color:white;
 }
 
-#login-form, #signup-form {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+@font-face {
+  font-family: 'type';
+  src: url('Minecraft.ttf');
 }
 
-#login-form {
-    background-color: #f0f0f0;
+.cleo:hover {
+  transform:scale(1.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
+.di {
+  text-align: center;
+}
+
+a {
+  display: inline-block;
+  transition: transform 2s ease-in-out, text-shadow 1s ease-in-out, margin-right 1s ease-in-out, margin-left 1s ease-in-out;
+  z-index: 1;
+  color: rgb(72, 0, 255);
+  user-select: none;
+}
+
+a:hover {
+  transform:scale(1.5);
+  margin-left: 15px;
+  margin-right: 15px;
+  text-shadow: 0 0 20px rgb(114, 101, 255);
+}
+
+.brainrot {
+  display: inline-block; 
+  color: #555;
+  transition: transform 2s ease-in-out;
+  animation: anim 10s linear infinite;
+  transform-style: preserve-3d;
+  user-select: none;
+  text-align: center;
+  justify-content: center;
+}
+
+@keyframes anim {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nusj {
+  color: white;
+  text-align: left;
+  padding-top:30px;
+}
+
+p {
+  color:white;
+  text-align: left;
+}
+
+.copy {
+  color: rgba(255, 255, 255, 0.424);
+  text-align: center;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-text {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+.other-text {
+  flex: 2;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
 }
