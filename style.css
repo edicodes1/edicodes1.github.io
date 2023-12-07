@@ -6,6 +6,8 @@ body {
 }
 
 h2 {
+  
+  font-size: 40px;
   text-align: center;
   transition: transform 2s ease-in-out, text-shadow 1s ease-in-out;
   color:white;
@@ -31,6 +33,7 @@ a {
   z-index: 1;
   color: rgb(72, 0, 255);
   user-select: none;
+  font-size: 20px;
 }
 
 a:hover {
@@ -58,8 +61,9 @@ a:hover {
 
 .nusj {
   color: white;
-  text-align: left;
-  padding-top:30px;
+  text-align: center;
+  padding-top:20px;
+  font-size: 50px;
 }
 
 p {
@@ -90,4 +94,16 @@ p {
   font-size: 18px;
   color: #333;
   text-align: left;
+}
+
+.nusj:hover {
+  transform:scale(1.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes floatAnimation {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(calc(5px * var(--random-x)), calc(-5px * var(--random-y))); }
+  50% { transform: translate(calc(-5px * var(--random-x)), calc(5px * var(--random-y))); }
+  75% { transform: translate(calc(5px * var(--random-x)), calc(5px * var(--random-y))); }
 }
