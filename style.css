@@ -100,10 +100,15 @@ p {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-  @keyframes floatAnimation {
+@keyframes floatAnimation {
     0%, 100% { transform: translate(0, 0); }
     25% { transform: translate(calc(5px * var(--random-x)), calc(-5px * var(--random-y))); }
     50% { transform: translate(calc(-5px * var(--random-x)), calc(5px * var(--random-y))); }
     75% { transform: translate(calc(5px * var(--random-x)), calc(5px * var(--random-y))); }
 }
   
+h3 {
+    color:white;
+    text-align: left;
+}
+
