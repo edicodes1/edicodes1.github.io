@@ -2,7 +2,7 @@ body {
     font-family: type;
     background-color:black;
     overflow: hidden;
-    text-align: right;
+    text-align: center;
 }
   
 h2 {
@@ -112,3 +112,6 @@ h3 {
     text-align: left;
 }
 
+img {
+    text-align:right;
+}
