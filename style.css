@@ -2,6 +2,8 @@ body {
     font-family: type;
     background-color:black;
     text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
   
 h2 {
@@ -17,7 +19,7 @@ h2 {
     src: url('Minecraft.ttf');
 }
   
-cleo:hover {
+.cleo:hover {
     transform:scale(1.5);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
@@ -113,4 +115,20 @@ h3 {
 
 img {
     text-align:center;
+}
+
+::webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+
+::webkit-scrollbar-track {
+    background: blue; /* color of the track */
+}
+
+::webkit-scrollbar-thumb {
+    background: black; /* color of the scrollbar handle */
+}
+
+::webkit-scrollbar-thumb:hover {
+    background: red; /* color of the scrollbar handle on hover */
 }
