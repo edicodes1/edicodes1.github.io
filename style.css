@@ -132,3 +132,8 @@ img {
 ::webkit-scrollbar-thumb:hover {
     background: red; /* color of the scrollbar handle on hover */
 }
+
+.test {
+    color:red;
+    font-size: 100px;
+}
